@@ -1,0 +1,114 @@
+extends layout
+
+append head
+  //- add page specific styles by appending to the head
+  link(rel="stylesheet" href="/stylesheets/splash-banner.css")
+  link(rel="stylesheet" href="/stylesheets/rh-feed.css")
+  link(rel="stylesheet" href="/stylesheets/rh-articles.css")
+  link(rel="stylesheet" href="/stylesheets/splash-signup.css")
+  link(rel="stylesheet" href="/stylesheets/splash-footer.css")
+  //- add page specific js
+  script(src="/javascripts/index.js" type="module" defer)
+
+block content
+  div#main-banner
+    div.banner-title
+      div.title-one
+        h2 SWE student with questions, answers, tips?
+      div.title-two
+        h2 You're in the right place.
+    div#write-button
+      button.create-post
+        a(name='feed' href=`/${locals.authenticated ? 'posts/create' : 'users/login'}`) Start Writing
+  div#rh-feed
+    div.feed-heading
+      p.feed-title What's new in the rabbit hole?
+    div.feed-posts
+      div.feed-posts_top
+        div.post
+          h4.post-title= posts[0].title
+          div.article-content= posts[0].content
+          div.article-button
+            button.learn-more
+              a(href=`/posts/${posts[0].id}`) Read More
+        div.right-post-one
+          h4.post-title= posts[1].title
+          div.article-content= posts[1].content
+          div.article-button
+            button.learn-more
+              a(href=`/posts/${posts[1].id}`) Read More
+      div.feed-posts_bottom
+        div.post
+          h4.post-title= posts[2].title
+          div.article-content= posts[2].content
+          div.article-button
+            button.learn-more
+              a(href=`/posts/${posts[2].id}`) Read More
+        div.right-post-two
+          h4.post-title= posts[3].title
+          div.article-content= posts[3].content
+          div.article-button
+            button.learn-more
+              a(href=`/posts/${posts[3].id}`) Read More
+  div#article-section-one
+    div.article-one
+      div.first-image
+      div.first-article
+        h4.article-title= posts[4].title
+        div.article-snippet= posts[4].content
+  div#article-section-two
+    div.article-two
+      div.second-article
+        h4.article-title= posts[5].title
+        div.article-snippet= posts[5].content
+      div.second-image
+  div#sign-up-section
+    div.top-section
+      h3.reminder You're in good company
+      p.join Join our community today to get all the answers you need to thrive in your career!
+    div.bottom-section
+      div.splash-quote
+        p.rabbit-quote "If you don't know where you are going any road will get you there."
+        blockquote -- White Rabbit
+        span.book-reference 'Alice In Wonderland'
+      button.join-btn
+        a(href='/users/create') Join Today
+      button.login-btn
+        a(href='/users/login') Sign In
+  div#splash-footer
+    div.footer-links
+      ul.footer-nav-right
+        li
+          a(href=`/${locals.authenticated ? 'posts/create' : 'users/login'}`) Write
+        li
+          a(href="#feed") Feed
+        li
+          a(href="https://en.wikipedia.org/wiki/Company") Company
+      div.icon-link
+        a(href="/")
+          img#footer-logo(src="/splash-imgs/rabbit-hole-icon.png", alt="logo")
+      ul.footer-nav-left
+        li
+          a(href="https://stackoverflow.com/") Help Desk
+        li
+          a(href="#") Blog
+        li
+          a(href="https://developer.mozilla.org/en-US/") Resources
+    div.foot-notes
+      div.footer-collaborators
+        div.team-mates
+          a(href="https://github.com/hamletv")
+            div.photo-div
+              img#hamlet(src="/git-photos/hamlet.jpeg", alt="hamlet-v")
+          a(href="https://github.com/mdepree5")
+            div.photo-div
+              img#mitch(src="/git-photos/mitch.jpeg", alt="mitch-d")
+          a(href="https://github.com/Ashley-B1")
+            div.photo-div
+              img#skye(src="/git-photos/git-skye.jpeg", alt="skye-b")
+          a(href="https://github.com/wanyi886")
+            div.photo-div
+              img#wan-yi(src="/git-photos/wan-yi.jpeg", alt="wan-l")
+      div.rh-copyright
+        p.site-date ©️ Rabbit Hole 2022
+        p.motto Be informed

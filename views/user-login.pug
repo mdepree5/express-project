@@ -1,0 +1,34 @@
+extends layout
+
+include utils
+
+append head
+  link(rel="stylesheet", type="text/css", href="/stylesheets/create-user.css")
+  script(src="/javascripts/index.js" type="module" defer)
+
+
+block content
+  div.headline-container
+    h1 Welcome back to Rabbit Hole!
+    p Onwards...
+
+  div
+    +validationErrorSummary(errors)
+    form(class="form-style" action='/users/login' method='post')
+      input(type='hidden' name='_csrf' value=csrfToken)
+      img.form-logo(src="./splash-imgs/rabbit-hole-icon.png", alt="logo")
+      h4 Log in, continue learning
+      ul
+        li
+          input(type="text" name="email" class="field-style field-full align-none" placeholder="Email address" value= email)
+        li
+          input(type="password" name="password" class="field-style field-full align-none" placeholder="Password" value= null)
+        div
+          button(class='sign-up' type='submit')
+            a(href='/users/login') Log in
+  div.sign-in-text
+    p Not part of the community yet?
+      span: a(href='/users/create')  Create an account.
+
+    button.demo-user
+      a(href='/users/demo-login') Demo User Login

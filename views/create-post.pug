@@ -1,0 +1,23 @@
+extends layout.pug
+include utils.pug
+
+append head
+  link(rel="stylesheet" href="/stylesheets/create-post.css")
+
+block content
+  br
+  +validationErrorSummary(errors)
+  div.post-area
+    form(action=`/posts/create` method="post")
+      input(type="hidden" name="_csrf" value=csrfToken)
+      div
+        label(for="title" class='title-label') Title
+      div
+        input(type="string" name="title" class='post-title' value=post.title)
+      div
+        label(for="content" class='title-label') Tell your story
+      div
+        textarea(name="content"  class='post-content' value=post.content)
+      div.buttons
+        button(type="submit" class="btn-submit") Publish
+        a(href=`/` class="btn-cancel") Cancel

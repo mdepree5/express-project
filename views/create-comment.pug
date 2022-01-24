@@ -1,0 +1,19 @@
+extends layout.pug
+include utils.pug
+
+append head
+  link(rel="stylesheet" href="/stylesheets/create-comment.css")
+
+block content
+  br
+  +validationErrorSummary(errors)
+  div.comment-area
+    form(action=`/posts/${postId}/comments/create` method="post")
+      input(type="hidden" name="_csrf" value=csrfToken)
+      div
+        label(for="content" class="comment-label") Write Comment Here
+      div
+        textarea(name="content"  class='comment-content' value=comment.content)
+      div.buttons
+        button(type="submit" class="btn-send") Send
+        a(href=`/posts/${postId}` class="btn-cancel") Cancel
