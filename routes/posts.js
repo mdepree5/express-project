@@ -52,7 +52,7 @@ router.post('/create', postValidators, csrfProtection, asyncHandler(async(req, r
             csrfToken: req.csrfToken()
         })
       }
-    res.redirect(`/posts/create`)
+    // res.redirect(`/posts/create`)
 }))
 
 
