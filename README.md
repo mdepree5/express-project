@@ -4,19 +4,19 @@
 Rabbit Hole is our team's first group project. It is inspired by [Medium](https://medium.com/). Every software engineering student has ventured down the endless digital rabbit hole at some point in their career. Rabbit Hole offers a way out. We are a community-based learning platform that strives to preserve the transparency of information software development relies on.
 
 ## Link to live site
-https://rabbit-hole-gp.herokuapp.com/
+https://rabbit-hole-cl.herokuapp.com/
 
 ## Demo
-Access demo: https://rabbit-hole-gp.herokuapp.com/users/login
+Access demo: https://rabbit-hole-cl.herokuapp.com/users/login
 ![demo](/images/readme-media/demo-rh.png)
 
 ## How to start development environment
-- Git clone https://github.com/Ashley-B1/Rabbit-Hole
+- Git clone https://github.com/mdepree5/express-project
 - Run npm install
 - Run npm start
 
 ## Wiki documentation
-https://github.com/Ashley-B1/Rabbit-Hole/wiki
+https://github.com/mdepree5/express-project/wiki
 
 ## Team
 - Skye Brown
