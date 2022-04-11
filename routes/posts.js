@@ -142,6 +142,7 @@ router.get('/:id/delete', csrfProtection, asyncHandler(async(req, res) => {
 
 // delete routes, haven't tested yet
 router.post('/:id/delete', csrfProtection, asyncHandler(async(req, res) => {
+  const userId = req.session.auth.userId;
   const postId = parseInt(req.params.id, 10);
   const post = await db.Post.findByPk(postId, { include: 'comments'});
   const comments = await db.Comment.findAll({
@@ -155,7 +156,7 @@ router.post('/:id/delete', csrfProtection, asyncHandler(async(req, res) => {
   }
 
   await post.destroy();
-  res.redirect(`/`);
+  res.redirect(`/users/${userId}`);
 }));
 
 
