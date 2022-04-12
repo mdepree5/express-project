@@ -19,7 +19,7 @@ block content
       h4 Sign up for a free account
       ul
         li
-          input(type="text" name="firstName" class="field-style field-split align-left" placeholder="First name" value= user.userName)
+          input(type="text" name="firstName" class="field-style field-split align-left" placeholder="First name" value= user.firstName)
           input(type="text" name="lastName" class="field-style field-split align-right" placeholder="Last name" value= user.lastName)
         li
           input(type="text" name="userName" class="field-style field-full align-none" placeholder="Username" value= user.userName)
@@ -31,7 +31,7 @@ block content
           input(type="password" name="confirmPassword" class="field-style field-full align-none" placeholder="Confirm password" value= '' )
         div
           button(class='sign-up' type='submit') Register
-            //- a(href="/users/create")
+
   div.sign-in-text
     p Already part of the community?
       span: a(href='/users/login')  Sign In

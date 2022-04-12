@@ -54,7 +54,6 @@ router.route('/login')
   } else {
     errors = validatorErrors.array().map(error => error.msg);
   }
-  // res.redirect('/')
   res.render('user-login', {
     title: 'Log In',
     email,
@@ -69,14 +68,6 @@ router.route('/logout')
   await logoutUser(req, res);
   await res.redirect('/users/login');
 }))
-// router.use((req, res, next) => {
-//   console.log(req.body);
-//   console.log(req.path, req.method)
-//   next();
-// })
-// router.post('/create', (req, res) => {
-//   console.log('hello test route', req.body);
-// })
 
 router.route('/create')
 .get(csrfProtection, asyncHandler(async(req, res) => {

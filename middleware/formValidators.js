@@ -6,7 +6,15 @@ const signUpValidators = [
   .exists({ checkFalsy: true })
   .withMessage('Please provide a value for username.')
   .isLength({ max: 50 })
-  .withMessage('Please provide a username of 50 characters or less.'),
+  .withMessage('Please provide a username of 50 characters or less.')
+  .custom(value => {
+    return db.User.findOne({ userName: value })
+    .then(user => {
+      if(user) {
+        return Promise.reject('Username already in use.');
+      }
+    });
+  }),
   check('firstName')
   .exists({ checkFalsy: true })
   .withMessage('Please provide a first name.')
@@ -20,6 +28,7 @@ const signUpValidators = [
   check('email')
   .exists({ checkFalsy: true })
   .withMessage('Please provide a valid email.')
+  .isEmail()
   .isLength({ max: 255 })
   .withMessage('Please provide an email of 255 characters or less.'),
   check('password')
