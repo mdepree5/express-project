@@ -35,19 +35,3 @@ block content
   div.sign-in-text
     p Already part of the community?
       span: a(href='/users/login')  Sign In
-
-
-  //- div.form-container
-  //-   +validationErrorSummary(errors)
-  //-   form(action='/users/create' method='post')
-  //-       input(type='hidden' name='_csrf' value=csrfToken)
-  //-       h4 Sign up for a free account
-  //-       +field('Username', 'userName', user.userName)
-  //-       +field('First Name', 'firstName', user.firstName)
-  //-       +field('Last Name', 'lastName', user.lastName)
-  //-       +field('Email', 'email', user.email)
-  //-       +field('Password', 'password', user.password, 'password')
-  //-       +field('Confirm Password', 'confirmPassword', '', 'password')
-  //-       div
-  //-           button(class='sign-up' type='submit') Register
-  //-           a(href='/') Cancel

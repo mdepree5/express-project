@@ -71,10 +71,11 @@ block content
         p.rabbit-quote "If you don't know where you are going any road will get you there."
         blockquote -- White Rabbit
         span.book-reference 'Alice In Wonderland'
-      button.join-btn
-        a(href='/users/create') Join Today
-      button.login-btn
-        a(href='/users/login') Sign In
+        if !locals.authenticated
+          button.join-btn
+            a(href='/users/create') Join Today
+          button.login-btn
+            a(href='/users/login') Sign In
   div#splash-footer
     div.footer-links
       ul.footer-nav-right
