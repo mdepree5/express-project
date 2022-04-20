@@ -26,8 +26,10 @@ block content
               div(class='comment-content')
                 li(class='username')=comment.users.userName
                 li(class='comment')=comment.content
-                a.edit-comment(href=`/posts/${post.id}/comments/${comment.id}/edit`) Edit
-                a.delete-comment(href=`/posts/${post.id}/comments/${comment.id}/delete`) Delete
+                if locals.authenticated
+                  if comment.userId === locals.user.id
+                    a.edit-comment(href=`/posts/${post.id}/comments/${comment.id}/edit`) Edit
+                    a.delete-comment(href=`/posts/${post.id}/comments/${comment.id}/delete`) Delete
         else
           div(class='no-comment')
             p.confirm-msg: em No comments available for this story now.
