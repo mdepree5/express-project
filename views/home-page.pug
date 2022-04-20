@@ -9,6 +9,18 @@ append head
   link(rel="stylesheet" href="/stylesheets/splash-footer.css")
   //- add page specific js
   script(src="/javascripts/index.js" type="module" defer)
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    
+    meta(name='title', property='og:title' content='Rabbit Hole')
+    meta(name='type' property='og:type', content='Website')
+    meta(name="image" property="og:image" content="https://md5-self.s3.amazonaws.com/rabbit-hole-home.png")
+    meta(name='author', content='Mitch DePree, Hamlet Villa, Wan-Yi Lee, Skye Brown')
+    meta(name="description" property="og:description" content="Medium-inspired group project: Express, PostgreSQL, CSS, Pug")
+    meta(name="theme-color" content="#000000")
+
 
 block content
   div#main-banner
