@@ -12,62 +12,25 @@
 
 #feed-posts {
   display: flex; flex-direction: row; flex-wrap: wrap;
-  align-items: center; justify-content: center;
+  align-items: flex-start; justify-content: center;
   width: 90%; margin-left: auto; margin-right: auto;
 }
 
 .post {
-  padding: 5px;
-  border: 1px solid red;
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: 1.5em;
+  width: 50%;
+  min-height: 12em;
 }
-.feed-title {
-  font-weight: bolder;
-}
-
-.feed-posts_top {
-  padding: 25px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.feed-posts_bottom {
-  padding: 25px;
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.post > h4 {
-  font-size: 28px;
-  width: fit-content;
-  font-family: 'Barlow Condensed', sans-serif;
-  letter-spacing: 1.2px;
-  padding: 5px;
-}
+.post > h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.8em; }
 
 .post > div {
-  padding: 10px;
-  width: 680px;
-  font-size: 20px;
-  margin-top: 25px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif; font-size: 1em;
+  margin-top: 1em; margin-bottom: 1em;
 }
 
 .post > a {
-  width: fit-content;
-  margin-top: 30px;
-  padding: 10px;
-  
-  padding: 10px;
-  border: #18A0FB solid 1px;
-  background-color: white;
-  width: 140px;
-  border-radius: 5px;
-
-  
-  color: #18A0FB;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: 'Barlow', sans-serif;
-  letter-spacing: .5px;
+  font-family: 'Barlow', sans-serif; font-size: 1em; text-decoration: none;
+  background-color: white; color: #18A0FB; border: #18A0FB solid 0.05em;
+  padding: 0.4em .8em; border-radius: 0.5em;
 }
