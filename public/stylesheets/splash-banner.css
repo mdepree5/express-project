@@ -7,28 +7,47 @@
   box-sizing: border-box;
 }
 
-#main-banner {
-  background-image: url("/splash-imgs/rh-banner.png"); background-repeat: no-repeat; 
-  background-size: cover; background-position: center;
-  display: flex; justify-content: center;
-  box-shadow: inset 0 0.05em 0.4em white;
-  padding: 30em;
+#splash-container {
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  background-color: white;
+  width: 100%;
+  padding: 0.4em;
+  text-align: center;
 }
 
-.banner-title {
-  font-family: 'Barlow', sans-serif; font-size: 2em; text-align: center;
+#splash-image{ height: 70%; width: 70%; border-radius: 1em; }
+#splash-image{ height: 80%; width: 80%; border-radius: 1em; }
+#splash-image{ height: 90%; width: 90%; border-radius: 1em; }
+#splash-image{ height: 100%; width: 100%; border-radius: 1em; }
+
+
+#splash-title {
+  font-family: 'Barlow', sans-serif; font-size: 1.6em; text-align: center;
   display: flex; flex-direction: column; align-items: center;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 0.6em; border-radius: 1em;
   position: absolute;
-  top: 20em;
-
+  top: 40%;
+  /* width: 90%; */
 }
 
-.banner-title a{
-  font-family: 'Montserrat', sans-serif; font-size: 1em; text-decoration: none;
+#splash-title a{
+  font-family: 'Montserrat', sans-serif; font-size: 0.8em; text-decoration: none;
   width: 10em;
   margin-top: em;
   background-color: #18A0FB; color: white;
-  padding: 0.4em .8em; border-radius: 0.5em;
+  padding: 0.3em .6em; border-radius: 0.5em;
+}
+
+/* todo ——————————————————————————————————————————————————————————————————————————————— */
+/* todo             Media                   */
+/* todo ——————————————————————————————————————————————————————————————————————————————— */
+@media (max-width: 950px) {
+  #splash-title { font-size: 1.4em; top: 30%; }
+}
+@media (max-width: 720px) {
+  #splash-title { font-size: 1em; top: 25%; }
+}
+@media (max-width: 500px) {
+  #splash-title { font-size: 0.9em; top: 20%; }
 }

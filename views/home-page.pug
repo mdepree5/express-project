@@ -21,8 +21,9 @@ append head
 
 
 block content
-  div#main-banner
-    div.banner-title
+  div#splash-container
+    img#splash-image(src="/splash-imgs/rh-banner.png", alt="rh-banner")
+    div#splash-title
       h2 SWE student with questions, answers, tips?
       h2 You're in the right place.
       a(name='feed' href=`/${locals.authenticated ? 'posts/create' : 'users/login'}`) Start Writing

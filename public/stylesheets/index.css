@@ -10,9 +10,12 @@
 #nav-bar {
   display: flex; justify-content: space-between; align-items: center;
   font-family: 'Montserrat', sans-serif; font-weight: bolder;
-  box-shadow: 0 0.05em 1em gray; color: #18A0FB;
+  box-shadow: 0 0.05em 0.4em gray;
+  border-bottom: 0.05em solid gray;
+  color: #18A0FB;
   height: 6em; z-index: 5;
   padding-left: 1em; padding-right: 1em;
+  position: sticky; flex-shrink: 0;
 }
 
 #left-nav {
