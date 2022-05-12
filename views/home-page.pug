@@ -82,7 +82,7 @@ block content
     div.bottom-section
       div.splash-quote
         p.rabbit-quote "If you don't know where you are going any road will get you there."
-        blockquote -- White Rabbit
+        blockquote - White Rabbit
         span.book-reference 'Alice In Wonderland'
         if !locals.authenticated
           button.join-btn
@@ -90,37 +90,17 @@ block content
           button.login-btn
             a(href='/users/login') Sign In
   div#splash-footer
-    div.footer-links
-      ul.footer-nav-right
-        //- li
-        //-   a(href=`/${locals.authenticated ? 'posts/create' : 'users/login'}`) Write
-        li
-          a(href="#feed") Feed
-        li
-          a(href="#") Blog
-      div.icon-link
-        a(href="/")
-          img#footer-logo(src="/splash-imgs/rabbit-hole-icon.png", alt="logo")
-      ul.footer-nav-left
-        li
-          a(href="https://stackoverflow.com/") Stack Overflow
-        li
-          a(href="https://developer.mozilla.org/en-US/") MDN Docs
-    div.foot-notes
-      div.footer-collaborators
-        div.team-mates
-          a(href="https://github.com/hamletv")
-            div.photo-div
-              img#hamlet(src="/git-photos/hamlet.jpeg", alt="hamlet-v")
-          a(href="https://github.com/mdepree5")
-            div.photo-div
-              img#mitch(src="/git-photos/mitch.jpeg", alt="mitch-d")
-          a(href="https://github.com/Ashley-B1")
-            div.photo-div
-              img#skye(src="/git-photos/git-skye.jpeg", alt="skye-b")
-          a(href="https://github.com/wanyi886")
-            div.photo-div
-              img#wan-yi(src="/git-photos/wan-yi.jpeg", alt="wan-l")
-      div.rh-copyright
-        p.site-date ©️ Rabbit Hole 2022
-        p.motto Be informed
+    div#footer-links
+      a(href="#") Home
+      a(href="https://stackoverflow.com/") Stack Overflow
+      a(href="https://developer.mozilla.org/en-US/") MDN Docs
+    div#footer-collaborators
+      a(href="https://github.com/hamletv")
+        img(src="/git-photos/hamlet.jpeg", alt="hamlet-v")
+      a(href="https://github.com/mdepree5")
+        img(src="/git-photos/mitch.jpeg", alt="mitch-d")
+      a(href="https://github.com/Ashley-B1")
+        img(src="/git-photos/git-skye.jpeg", alt="skye-b")
+      a(href="https://github.com/wanyi886")
+        img(src="/git-photos/wan-yi.jpeg", alt="wan-l")
+    div#copyright ©️ Rabbit Hole 2022 | Be informed
