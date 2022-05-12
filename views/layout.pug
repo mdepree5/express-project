@@ -10,23 +10,15 @@ html
       div#left-nav
         a(href='/' class='rabbit-logo')
           img#rabbit-logo(src="/splash-imgs/rabbit-hole-icon.png", alt="logo")
-        h1= title
+        h1=title
       div#right-nav
-        ul
-          if locals.authenticated
-            li
-              a(href='/posts/create') Write
-            li
-              a(href='/users/logout') Logout
-            li
-              a(href=`/users/${locals.user.id}`) My Page
-          else
-            li
-              a(href='/users/login') Write
-            li
-              a(href='/users/login') Sign In
-            li#sign-up
-              button
-                a(href='/users/create') Register
+        if locals.authenticated
+          a(href='/posts/create') Write
+          a(href=`/users/${locals.user.id}`) My Page
+          a(href='/users/logout') Logout
+        else
+          a(href='/users/login') Write
+          a(href='/users/login') Sign In
+          a#register(href='/users/create') Register
     block content
     //- div.space
