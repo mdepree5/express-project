@@ -41,12 +41,14 @@ block content
           div.article-button
             button.learn-more
               a(href=`/posts/${posts[0].id}`) Read More
-        div.right-post-one
+        //- div.right-post-one
+        div.post
           h4.post-title= posts[1].title
           div.article-content= posts[1].content
           div.article-button
             button.learn-more
               a(href=`/posts/${posts[1].id}`) Read More
+      //- div.feed-posts_bottom
       div.feed-posts_bottom
         div.post
           h4.post-title= posts[2].title
@@ -54,7 +56,8 @@ block content
           div.article-button
             button.learn-more
               a(href=`/posts/${posts[2].id}`) Read More
-        div.right-post-two
+        //- div.right-post-two
+        div.post
           h4.post-title= posts[3].title
           div.article-content= posts[3].content
           div.article-button
@@ -89,22 +92,20 @@ block content
   div#splash-footer
     div.footer-links
       ul.footer-nav-right
-        li
-          a(href=`/${locals.authenticated ? 'posts/create' : 'users/login'}`) Write
+        //- li
+        //-   a(href=`/${locals.authenticated ? 'posts/create' : 'users/login'}`) Write
         li
           a(href="#feed") Feed
         li
-          a(href="https://en.wikipedia.org/wiki/Company") Company
+          a(href="#") Blog
       div.icon-link
         a(href="/")
           img#footer-logo(src="/splash-imgs/rabbit-hole-icon.png", alt="logo")
       ul.footer-nav-left
         li
-          a(href="https://stackoverflow.com/") Help Desk
+          a(href="https://stackoverflow.com/") Stack Overflow
         li
-          a(href="#") Blog
-        li
-          a(href="https://developer.mozilla.org/en-US/") Resources
+          a(href="https://developer.mozilla.org/en-US/") MDN Docs
     div.foot-notes
       div.footer-collaborators
         div.team-mates

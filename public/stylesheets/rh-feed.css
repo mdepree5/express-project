@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
 
 #rh-feed {
+  /* width: 100%; */
   padding: 10px;
 }
 
@@ -49,13 +50,13 @@
   padding: 5px;
 }
 
-.right-post-one {
+/* .right-post-one {
   margin-right: 175px;
 }
 
 .right-post-two {
   margin-right: 175px;
-}
+} */
 
 .article-content {
   padding: 10px;

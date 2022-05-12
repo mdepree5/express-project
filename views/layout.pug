@@ -1,21 +1,17 @@
 doctype html
 html
   head
-      block head
-        title="Rabbit Hole"
-        link(rel='stylesheet' href='/stylesheets/index.css')
-        append head
-        //- add page specific js
-        //- script(src="/javascripts/index.js" type="module" defer)
+    block head
+      title="Rabbit Hole"
+      link(rel='stylesheet' href='/stylesheets/index.css')
+      append head
   body
-    div#header
-      div.left-nav
-        div#icon
-          a(href='/' class='rabbit-logo')
-            img.rabbit-logo(src="/splash-imgs/rabbit-hole-icon.png", alt="logo")
-        div#title
-          h1= title
-      div.right-nav
+    nav#nav-bar
+      div#left-nav
+        a(href='/' class='rabbit-logo')
+          img#rabbit-logo(src="/splash-imgs/rabbit-hole-icon.png", alt="logo")
+        h1= title
+      div#right-nav
         ul
           if locals.authenticated
             li
@@ -33,4 +29,4 @@ html
               button
                 a(href='/users/create') Register
     block content
-    div.space
+    //- div.space
