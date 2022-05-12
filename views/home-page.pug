@@ -23,46 +23,31 @@ append head
 block content
   div#main-banner
     div.banner-title
-      div.title-one
-        h2 SWE student with questions, answers, tips?
-      div.title-two
-        h2 You're in the right place.
-    div#write-button
-      button.create-post
-        a(name='feed' href=`/${locals.authenticated ? 'posts/create' : 'users/login'}`) Start Writing
-  div#rh-feed
-    div.feed-heading
-      p.feed-title What's new in the rabbit hole?
+      h2 SWE student with questions, answers, tips?
+      h2 You're in the right place.
+      a(name='feed' href=`/${locals.authenticated ? 'posts/create' : 'users/login'}`) Start Writing
+  div#feed
+    div.feed-heading What's new in the rabbit hole?
     div.feed-posts
-      div.feed-posts_top
-        div.post
-          h4.post-title= posts[0].title
-          div.article-content= posts[0].content
-          div.article-button
-            button.learn-more
-              a(href=`/posts/${posts[0].id}`) Read More
-        //- div.right-post-one
-        div.post
-          h4.post-title= posts[1].title
-          div.article-content= posts[1].content
-          div.article-button
-            button.learn-more
-              a(href=`/posts/${posts[1].id}`) Read More
-      //- div.feed-posts_bottom
-      div.feed-posts_bottom
-        div.post
-          h4.post-title= posts[2].title
-          div.article-content= posts[2].content
-          div.article-button
-            button.learn-more
-              a(href=`/posts/${posts[2].id}`) Read More
-        //- div.right-post-two
-        div.post
-          h4.post-title= posts[3].title
-          div.article-content= posts[3].content
-          div.article-button
-            button.learn-more
-              a(href=`/posts/${posts[3].id}`) Read More
+      div.post
+        h4.post-title= posts[0].title
+        div.article-content= posts[0].content
+          a(href=`/posts/${posts[0].id}`) Read More
+      div.post
+        h4.post-title= posts[1].title
+        div.article-content= posts[1].content
+        div.article-button
+          a(href=`/posts/${posts[1].id}`) Read More
+      div.post
+        h4.post-title= posts[2].title
+        div.article-content= posts[2].content
+        div.article-button
+          a(href=`/posts/${posts[2].id}`) Read More
+      div.post
+        h4.post-title= posts[3].title
+        div.article-content= posts[3].content
+        div.article-button
+          a(href=`/posts/${posts[3].id}`) Read More
   div#article-section-one
     div.article-one
       div.first-image
